@@ -1,9 +1,7 @@
 import streamlit as st
-import getpass
-import os
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 
 # Create the LLM
-from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 
 llm = ChatGoogleGenerativeAI(
     google_api_key=st.secrets["GOOGLE_API_KEY"],
